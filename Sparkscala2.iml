@@ -61,9 +61,7 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-math:2.1" level="project" />
     <orderEntry type="library" name="Maven: xmlenc:xmlenc:0.52" level="project" />
     <orderEntry type="library" name="Maven: commons-configuration:commons-configuration:1.6" level="project" />
-    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: commons-digester:commons-digester:1.8" level="project" />
-    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.7.0" level="project" />
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils-core:1.8.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:2.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-auth:2.2.0" level="project" />
@@ -150,6 +148,13 @@
     <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.4.6" level="project" />
     <orderEntry type="library" name="Maven: jline:jline:0.9.94" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:3.8.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.spark:spark-streaming-kafka-0-8_2.10:2.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.kafka:kafka_2.10:0.8.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.spark:spark-tags_2.10:2.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.scalatest:scalatest_2.10:2.2.6" level="project" />
+    <orderEntry type="library" name="Maven: com.datastax.spark:spark-cassandra-connector_2.10:2.0.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.3" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.spark:spark-streaming_2.11:2.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.spark:spark-sql_2.11:2.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.univocity:univocity-parsers:2.2.1" level="project" />

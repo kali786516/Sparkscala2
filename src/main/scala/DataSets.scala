@@ -39,7 +39,8 @@ object DataSets {
     FinancesDS
                 .na.drop("all",Seq("ID","Account","Amount","Description","Date"))
                   .na.fill("Unknown",Seq("Description")).as[Transaction]
-                    .filter(tx=> (tx.amount!=0 || tx.description == "Unknown"))
+                    //.filter(tx=> (tx.amount!=0 || tx.description == "Unknown"))
+                        .where($"Amount" =!= 0 || $"Description" === "Unknown")
                       .select($"Account.Number".as("AccountNumber").as[String],$"Amount".as[Double],
                       $"Date".as[java.sql.Date](Encoders.DATE),$"Description".as[String])
                         .withColumn("RollingAverage",rollingAvgForPrevious4PerAccount)
@@ -63,12 +64,13 @@ object DataSets {
                 $"descritption".as[String],
                 $"date".as[java.sql.Date](Encoders.DATE)).as[TransactionForAverage]
                       .groupByKey(_.accountNumber)
-                        .agg(
+                       .agg(
                           typed.avg[TransactionForAverage](_.amount).as("AverageTransaction").as[Double],
                           typed.sum[TransactionForAverage](_.amount),
                           typed.count[TransactionForAverage](_.amount),
                           max($"Amount").as("MaxTransaction").as[Double]
                         )
+
                          .coalesce(5)
                            .write.mode(SaveMode.Overwrite).json("/Users/sriharitummala/Downloads/finances-small-account-details")
 
